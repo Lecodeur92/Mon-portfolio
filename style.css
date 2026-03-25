@@ -1,0 +1,242 @@
+@font-face {
+    font-family: 'Inter'; 
+    src: url(assets/fonts/Inter-VariableFont_opsz,wght.ttf), format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PlusJakartaSans'; 
+    src:url(assets/fonts/PlusJakartaSans-VariableFont_wght.ttf) , format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --font-primary : 'Inter', sans-serif;
+    --font-secondary : 'PlusJakartaSans', sans-serif;
+    --frosted-gray : #F8FAFC;
+    --sweet-mint : #E6FFFA;
+    --midnight-blue : #0F172A;
+}
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Pour que le déplacement soit fluide et non brusque */
+    scroll-padding-top: 100px; /* Ajuste cette valeur selon la hauteur de ta navbar + l'espace voulu */
+}
+
+h1 {font-family: var(--font-secondary);}
+
+h2, h3 {font-family: var(--font-primary);}
+
+.navbar {
+    position: fixed; /* Reste en haut au scroll */
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5em;
+    z-index: 1000; /* Passe au-dessus de tout */
+    background: rgba(255, 255, 255, 0.8); /* Fond blanc translucide */
+    backdrop-filter: blur(10px); /* L'effet de flou magique */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-family: var(--font-secondary);
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--midnight-blue);
+}
+
+.logo span { color: #42b883; }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #64748b;
+    font-family: var(--font-primary);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #42b883;
+}
+
+#presentation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: relative; /* Indispensable pour que les symboles restent derrière le texte */
+    overflow: hidden;
+    padding-top: 80px;
+}
+
+#presentation h2 {
+    color: #64748b; 
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+
+#presentation h1 {
+    color: #020214; 
+    font-size: 5rem; 
+    letter-spacing: -0.05em;
+    font-weight: 900;
+}
+
+#presentation .contact-me {
+    background: none;
+    border: 2px solid #42b883;
+    color: #42b883;
+    font-family: var(--font-secondary);
+    margin-top: 2em;
+}
+
+/* Le symbole < > en haut à gauche */
+#presentation::before {
+    content: "< >";
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    font-family: var(--font-primary);
+    font-size: 15rem;
+    font-weight: 900;
+    color: gray; /* Utilise ton vert très pâle */
+    opacity: 0.2; /* Très discret pour ne pas gêner la lecture */
+    z-index: -1;  /* Passe derrière ton nom et ton titre */
+    transform: rotate(-15deg);
+}
+
+/* Le symbole { } en bas à droite */
+#presentation::after {
+    content: "{ }";
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+    font-family: var(--font-primary);
+    font-size: 18rem;
+    font-weight: 900;
+    color: #42b883; /* Un gris très léger */
+    opacity: 0.3;
+    z-index: -1;
+    transform: rotate(10deg);
+}
+
+#skills {
+    width: 100%;
+    padding: 5em 5em;
+    background: var(--frosted-gray);
+    overflow: hidden;
+    border: 1px solid transparent;
+}
+
+#skills h3 {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1em;
+}
+
+.skills-grid .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    background: #FFF;
+    padding: 3em 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    font-family: var(--font-secondary);
+    font-weight: 800;
+}
+
+.skills-grid .card:hover {
+    color: #42b883;
+}
+
+
+.skills-grid .card > .img {
+    height: 50px;
+}
+
+#projects {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    border: 1px solid transparent;
+    padding: 5em 5em; 
+}
+
+#projects h3 {
+    text-align: center;
+}
+
+#contact {
+    background-color: var(--midnight-blue);
+    color: white;
+    padding: 100px 5em;
+    text-align: center;
+}
+
+#contact h3 {
+    font-family: var(--font-primary);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#contact .contact-content > * {
+    font-family: var(--font-secondary);
+}
+
+.email-btn {
+    display: inline-block;
+    background-color: #42b883; /* Le vert VueJS */
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 2rem 0;
+    transition: transform 0.3s ease;
+}
+
+.email-btn:hover {
+    transform: scale(1.05); /* Petit effet de zoom au survol */
+}
+
+@media (max-width: 480px) {
+    .navbar { padding: 1rem 2rem; }
+    .nav-links { display: none; } /* On pourra faire un menu burger plus tard */
+    #presentation h2 {font-size: 1.5em; letter-spacing: -0.01em;}
+    #presentation h1 {font-size: 2em; font-weight: 900;}
+    #presentation .contact-me {padding: .5rem 1rem;}
+    #presentation::before {display: none;}
+    #presentation::after {transform: rotate(0deg); bottom: 0%; right: 0%;}
+    #skills {padding: 2em 5em; display: flex; flex-direction: column; justify-content: center; align-items: center;}
+    #contact {padding: 50px 3em;}
+    #contact h3 {font-size: 1.55555rem;}
+    #contact .email-btn {padding: 1rem 3rem;}
+}
