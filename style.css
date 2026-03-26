@@ -227,49 +227,68 @@ h2, h3 {font-family: var(--font-primary);}
     transform: scale(1.05); /* Petit effet de zoom au survol */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
+    /* 1. Ajustement de la Navbar */
     .navbar { 
-        padding: 1rem 2rem; 
+        padding: 1rem 1.5rem; 
     }
     .nav-links { 
         display: none; 
-    } /* On pourra faire un menu burger plus tard */
+    }
+
+    /* 2. Correction de la section Présentation */
     #presentation {
-        height: 400px;
-    }
-    #presentation h2 {
-        font-size: 1.5em; 
-        letter-spacing: -0.01em;
-    }
-    #presentation h1 {
-        font-size: 1.5em; 
-        font-weight: bolder;
-        text-transform: uppercase;
-    }
-    #presentation .contact-me {
-        padding: .5rem 1rem;
-    }
-    #presentation::before {
-        display: none;
-    }
-    #presentation::after {
-        transform: rotate(0deg); 
-        bottom: 10%; right: 5%;
-    }
-    #skills {
-        padding: 2em 5em; 
-        display: flex; 
-        flex-direction: column; 
-        justify-content: center; 
+        height: auto;           /* On laisse le contenu respirer */
+        min-height: 450px;      /* Hauteur minimale pour garder du style */
+        padding: 100px 1.5rem 40px 1.5rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
         align-items: center;
     }
+
+    #presentation h2 {
+        font-size: 1rem;        /* Plus petit pour le sous-titre */
+        letter-spacing: 0.1em;
+    }
+
+    #presentation h1 {
+        font-size: 2.5rem;      /* Taille vitale : évite de sortir de l'écran */
+        line-height: 1.1;
+        margin-top: 10px;
+        word-wrap: break-word;  /* Coupe le texte si ton nom est très long */
+    }
+
+    /* 3. Ajustement ou masquage des symboles de fond */
+    #presentation::before, 
+    #presentation::after {
+        font-size: 6rem;        /* Réduction drastique de la taille */
+        opacity: 0.1;           /* Encore plus discret sur petit écran */
+    }
+
+    #presentation::before {
+        top: 15%;
+        left: 2%;
+        transform: rotate(-10deg);
+    }
+
+    #presentation::after {
+        bottom: 10%;
+        right: 2%;
+        transform: rotate(10deg);
+    }
+
+    /* 4. Ajustement des Skills pour le mobile */
+    #skills {
+        padding: 3em 1.5rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+        gap: 1.5rem;
+    }
+
     #contact {
-        padding: 50px 3em;
-    }
-    #contact h3 {
-        font-size: 1.55555rem;
-    }
-    #contact .email-btn {
-        padding: 1rem 3rem;
+        padding: 40px 1.5rem;
     }
 }
