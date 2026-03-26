@@ -235,15 +235,16 @@ h2, h3 {font-family: var(--font-primary);}
         display: none; 
     } /* On pourra faire un menu burger plus tard */
     #presentation {
-        min-height: 400px;
+        height: 400px;
     }
     #presentation h2 {
         font-size: 1.5em; 
         letter-spacing: -0.01em;
     }
     #presentation h1 {
-        font-size: 2em; 
+        font-size: em; 
         font-weight: 900;
+        text-transform: uppercase;
     }
     #presentation .contact-me {
         padding: .5rem 1rem;
