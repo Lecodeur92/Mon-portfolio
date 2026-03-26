@@ -228,15 +228,47 @@ h2, h3 {font-family: var(--font-primary);}
 }
 
 @media (max-width: 480px) {
-    .navbar { padding: 1rem 2rem; }
-    .nav-links { display: none; } /* On pourra faire un menu burger plus tard */
-    #presentation h2 {font-size: 1.5em; letter-spacing: -0.01em;}
-    #presentation h1 {font-size: 2em; font-weight: 900;}
-    #presentation .contact-me {padding: .5rem 1rem;}
-    #presentation::before {display: none;}
-    #presentation::after {transform: rotate(0deg); bottom: 0%; right: 0%;}
-    #skills {padding: 2em 5em; display: flex; flex-direction: column; justify-content: center; align-items: center;}
-    #contact {padding: 50px 3em;}
-    #contact h3 {font-size: 1.55555rem;}
-    #contact .email-btn {padding: 1rem 3rem;}
+    .navbar { 
+        padding: 1rem 2rem; 
+    }
+    .nav-links { 
+        display: none; 
+    } /* On pourra faire un menu burger plus tard */
+    #presentation {
+        height: 80vh;
+    }
+    #presentation h2 {
+        font-size: 1.5em; 
+        letter-spacing: -0.01em;
+    }
+    #presentation h1 {
+        font-size: 2em; 
+        font-weight: 900;
+    }
+    #presentation .contact-me {
+        padding: .5rem 1rem;
+    }
+    #presentation::before {
+        display: none;
+    }
+    #presentation::after {
+        transform: rotate(0deg); 
+        bottom: 0%; right: 5%;
+    }
+    #skills {
+        padding: 2em 5em; 
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center;
+    }
+    #contact {
+        padding: 50px 3em;
+    }
+    #contact h3 {
+        font-size: 1.55555rem;
+    }
+    #contact .email-btn {
+        padding: 1rem 3rem;
+    }
 }
