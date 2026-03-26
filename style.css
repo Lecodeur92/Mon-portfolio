@@ -235,7 +235,7 @@ h2, h3 {font-family: var(--font-primary);}
         display: none; 
     } /* On pourra faire un menu burger plus tard */
     #presentation {
-        min-height: 60vh;
+        min-height: 600px;
     }
     #presentation h2 {
         font-size: 1.5em; 
