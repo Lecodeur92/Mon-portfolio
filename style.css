@@ -227,7 +227,7 @@ h2, h3 {font-family: var(--font-primary);}
     transform: scale(1.05); /* Petit effet de zoom au survol */
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .navbar { 
         padding: 1rem 2rem; 
     }
@@ -242,8 +242,8 @@ h2, h3 {font-family: var(--font-primary);}
         letter-spacing: -0.01em;
     }
     #presentation h1 {
-        font-size: 2em; 
-        font-weight: 900;
+        font-size: 1.5em; 
+        font-weight: bolder;
         text-transform: uppercase;
     }
     #presentation .contact-me {
@@ -254,7 +254,7 @@ h2, h3 {font-family: var(--font-primary);}
     }
     #presentation::after {
         transform: rotate(0deg); 
-        bottom: 0%; right: 5%;
+        bottom: 10%; right: 5%;
     }
     #skills {
         padding: 2em 5em; 
