@@ -242,7 +242,7 @@ h2, h3 {font-family: var(--font-primary);}
         letter-spacing: -0.01em;
     }
     #presentation h1 {
-        font-size: em; 
+        font-size: 2em; 
         font-weight: 900;
         text-transform: uppercase;
     }
